@@ -9,6 +9,7 @@ from dash import dcc
 df = pd.read_csv("C:\\3rd\\WEB_MAPPING\\week_10\\service_311.csv", encoding='ISO-8859-1')
 
 app = Dash()
+server = app.server
 app.layout = html.Div(
     [html.Div(children='Lab08', style={'color':'red'}),
     dash_table.DataTable(id='data-table', data = df.to_dict('records'), page_size=10),
